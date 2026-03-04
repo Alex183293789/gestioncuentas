@@ -13,4 +13,13 @@ public class Cuenta {
         System.out.println("Titular: " + titular);
         System.out.println("Saldo: " + saldo);
     }
+
+    public boolean retirarConControl(double cantidad) {
+        if (cantidad <= saldo) {
+            saldo -= cantidad;
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
