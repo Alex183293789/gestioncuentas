@@ -4,32 +4,32 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Cuenta c = new Cuenta();
-        c.titular = "Laura Martínez";
-        c.saldo = 500;
+        Cuenta cuenta = new Cuenta("Ana López");
+        cuenta.setTitular("Laura Martínez");
+        cuenta.setSaldo(500);
 
-        CuentaAhorro ca = new CuentaAhorro();
-        ca.titular = "Pedro Gómez";
-        ca.saldo = 1000;
+        CuentaAhorro cuentaAhorro = new CuentaAhorro();
+        cuentaAhorro.setTitular("Pedro Gómez");
+        cuentaAhorro.setSaldo(1000);
 
         CuentaCorriente cc = new CuentaCorriente();
-        cc.titular = "Ana López";
-        cc.saldo = 800;
+        cc.setTitular("Ana López");
+        cc.setSaldo(800);
 
         // Operaciones hechas directamente sobre el saldo (mal diseño intencionado)
-        c.saldo = c.saldo + 200 - 50;
+        cuenta.setSaldo(cuenta.getSaldo() + 200 - 50);
 
-        ca.saldo = ca.saldo + 300;
-        ca.aplicarInteres();
+        cuentaAhorro.setSaldo(cuentaAhorro.getSaldo() + 300);
+        cuentaAhorro.aplicarInteres();
 
-        cc.saldo = cc.saldo - 100;
+        cc.setSaldo(cc.getSaldo() - 100);
         cc.aplicarComision();
 
         System.out.println("---- Cuenta normal ----");
-        c.mostrarDatos();
+        cuenta.mostrarDatos();
 
         System.out.println("---- Cuenta ahorro ----");
-        ca.mostrarDatos();
+        cuentaAhorro.mostrarDatos();
 
         System.out.println("---- Cuenta corriente ----");
         cc.mostrarDatos();
