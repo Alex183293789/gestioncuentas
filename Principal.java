@@ -1,4 +1,11 @@
 package gestioncuentas;
+/**
+ * Clase principal que ejecuta el programa de prueba
+ * para las cuentas bancarias.
+ *
+ * @author TuNombre
+ * @version 1.0
+ */
 
 public class Principal {
 
